@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<h1>All Research Projects</h1>
+<div class="projects-grid">
+  {% assign sorted_projects = site.projects | sort: 'title' %}
+  {% for project in sorted_projects %}
+    {% include project_card.html project=project %}
+  {% endfor %}
+</div>
