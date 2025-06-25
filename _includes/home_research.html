@@ -1,0 +1,10 @@
+<div class="home-research">
+  <h2>Research Highlights</h2>
+  <div class="projects-grid">
+    {% assign recent_projects = site.projects | slice: 0, 3 %}
+    {% for project in recent_projects %}
+      {% include project_card.html project=project %}
+    {% endfor %}
+  </div>
+  <p><a href="/research/">View All Projects</a></p>
+</div>
